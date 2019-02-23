@@ -1,11 +1,15 @@
 ﻿using System;
+using prmToolkit.NotificationPattern;
 using XGamer.Domain.Arguments.Player;
+using XGamer.Domain.Entities;
 using XGamer.Domain.Interfaces.Repositories;
 using XGamer.Domain.Interfaces.Services;
+using XGamer.Domain.Resources;
+using XGamer.Domain.ValueObjects;
 
 namespace XGamer.Domain.Services
 {
-    public class ServicePlayer : IServicePlayer
+    public class ServicePlayer : Notifiable, IServicePlayer
     {
         private readonly IRepositoryPlayer _repositoryPlayer;
 
@@ -16,31 +20,28 @@ namespace XGamer.Domain.Services
 
         public AddPlayerResponse Add(AddPlayerRequest request)
         {
-            var id = _repositoryPlayer.Add(request);
+            Player player = new Player(request.Name, request.Email, request.Password);
+            var id = _repositoryPlayer.Add(player);
 
-            return new AddPlayerResponse(id, "Player added!");
+            return new AddPlayerResponse(id, string.Format(Messages.RES_0_ADDED, "Player"));
         }
 
         public AuthenticatePlayerResponse Authenticate(AuthenticatePlayerRequest request)
         {
-            if(request == null)
+            if (request == null)
             {
-                throw new Exception("Authenticate is required!");
+                AddNotification("request", Messages.RES_INVALID_PARAMETERS);
             }
 
-            // TODO: Use Notification Pattner
-            if(string.IsNullOrEmpty(request.Email))
-            {
-                throw new ArgumentNullException(request.Email, "Email is required!");
-            }
+            Email email = new Email(request.Email);
+            Player player = new Player(email, request.Password);
 
-            // TODO: Use Notification Pattner
-            if (string.IsNullOrEmpty(request.Password))
-            {
-                throw new ArgumentNullException(request.Password, "Password is required!");
-            }
+            AddNotifications(player, email);
 
-            return _repositoryPlayer.Authenticate(request);
+            if (player.IsValid())
+                return null;
+
+            return _repositoryPlayer.Authenticate(player.Email.Address, player.Password);
         }
     }
 }

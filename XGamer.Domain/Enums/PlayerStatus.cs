@@ -10,6 +10,5 @@ namespace XGamer.Domain.Enums
         Playing = 0,
         Active = 1,
         Blocked = 2
-        
     }
 }
