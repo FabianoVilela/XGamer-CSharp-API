@@ -1,5 +1,6 @@
 ﻿using System;
 using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
 using XGamer.Domain.Enums;
 using XGamer.Domain.Resources;
 using XGamer.Domain.ValueObjects;
@@ -14,7 +15,7 @@ namespace XGamer.Domain.Entities
             Email = email;
 
             new AddNotifications<Player>(this)
-                .IfNullOrEmpty(password, string.Format(Messages.RES_0_IS_REQUIRED, "Password"))
+                .IfNullOrEmpty(password, Messages.RES_0_IS_REQUIRED.ToFormat("Password"))
                 .IfLengthLowerThan(password, 6, Messages.RES_PASSWORD_MUST_BE_GREAT_THAN_6);
         }
 

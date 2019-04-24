@@ -117,6 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1" xml:space="preserve">
+    <value>A {0} deve ser maior ou igual a {1}.</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_CHAMADA_X1" xml:space="preserve">
+    <value>Já existe uma {0} chamada {1}.</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_COM_A_X1_X2" xml:space="preserve">
+    <value>Já existe uma {0} com a {1} {2}</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_COM_O_X1_X2" xml:space="preserve">
+    <value>Já existe uma {0} com o {1} {2}</value>
+  </data>
+  <data name="JA_EXISTE_UM_X0_CHAMADO_X1" xml:space="preserve">
+    <value>Já existe um {0} chamado {1}.</value>
+  </data>
+  <data name="JA_EXISTE_UM_X0_COM_A_X1_X2" xml:space="preserve">
+    <value>Já existe um {0} com a {1} {2}</value>
+  </data>
+  <data name="JA_EXISTE_UM_X0_COM_O_X1_X2" xml:space="preserve">
+    <value>Já existe um {0} com o {1} {2}</value>
+  </data>
+  <data name="NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1" xml:space="preserve">
+    <value>Não é possível excluir uma {0} associada a uma {1}.</value>
+  </data>
+  <data name="NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UM_X1" xml:space="preserve">
+    <value>Não é possível excluir uma {0} associada a um {1}.</value>
+  </data>
+  <data name="NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UMA_X1" xml:space="preserve">
+    <value>Não é possível excluir um {0} associado a uma {1}.</value>
+  </data>
+  <data name="NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UM_X1" xml:space="preserve">
+    <value>Não é possível excluir um {0} associado a um {1}.</value>
+  </data>
+  <data name="O_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1" xml:space="preserve">
+    <value>O {0} deve ser maior ou igual a {1}.</value>
+  </data>
   <data name="RES_0_ADDED" xml:space="preserve">
     <value>{0} added!</value>
   </data>
@@ -126,8 +162,23 @@
   <data name="RES_0_IS_REQUIRED" xml:space="preserve">
     <value>{0} is required!</value>
   </data>
+  <data name="RES_0_IS_REQUIRED_AND_MUST_CONTAIN_BETWEEN_1_AND_2_CHARACTERS" xml:space="preserve">
+    <value>{0} is required and must contain between {1} and {2} characters.</value>
+  </data>
+  <data name="RES_0_IS_REQUIRED_AND_MUST_HAVE_1_CHARACTERS" xml:space="preserve">
+    <value>{0} is required and must have {1} characters.</value>
+  </data>
+  <data name="RES_0_NOT_INFORMED" xml:space="preserve">
+    <value>{0} not informed!</value>
+  </data>
   <data name="RES_INVALID_PARAMETERS" xml:space="preserve">
     <value>Invalid parameters!</value>
+  </data>
+  <data name="RES_NOT_FOUND" xml:space="preserve">
+    <value>Not found!</value>
+  </data>
+  <data name="RES_OPERATION_PERFORMED_SUCCESSFULLY" xml:space="preserve">
+    <value>Operation performed successfully.</value>
   </data>
   <data name="RES_PASSWORD_MUST_BE_GREAT_THAN_6" xml:space="preserve">
     <value>Password must have more than 6 characters!</value>
